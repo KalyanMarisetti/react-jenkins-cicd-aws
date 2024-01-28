@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Copy built artifacts to your EC2 instance
-                    sh 'scp -r -i /home/kalyan/kalyan/AWS/Key_Pairs/MyKeyPair.pem ./build/* ec2-user@172.31.34.78:/home/ubuntu/my-projects/react-jenkins-cicd-aws'
+                    sh 'scp -r -v -i /home/kalyan/kalyan/AWS/Key_Pairs/MyKeyPair.pem ./build/* ec2-user@172.31.34.78:/home/ubuntu/my-projects/react-jenkins-cicd-aws'
                 }
             }
         }
