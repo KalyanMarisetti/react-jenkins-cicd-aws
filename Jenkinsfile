@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'scp -r -v -i /home/kalyan/kalyan/AWS/Key_Pairs/MyKeyPair.pem ./build/* ec2-user@172.31.34.78:/home/ubuntu/my-projects/react-jenkins-cicd-aws'
+                    sh 'scp -R -i /home/kalyan/kalyan/AWS/Key_Pairs/MyKeyPair.pem /var/lib/jenkins/workspace/react-webhook-client/build/* ec2-user@172.31.34.78:/home/ubuntu/my-projects/test'
                 }
                 //  script {
                 //     withCredentials([sshUserPrivateKey(credentialsId: EC2_KEY_CREDENTIAL, keyFileVariable: 'EC2_KEY_FILE')]) {
